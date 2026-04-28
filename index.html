@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedro Gabrig | Advocacia Criminal — Rio de Janeiro</title>
+  <meta name="description" content="Pedro Gabrig Advocacia Criminal — Defesa técnica de excelência em Direito Penal e Processo Penal. Atendimento no Centro do Rio de Janeiro." />
+  <meta name="theme-color" content="#1d3147" />
+  <link rel="icon" type="image/webp" href="logo.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --navy-950:#0f1d2c;
+      --navy-900:#1a2c40;
+      --navy-850:#1d3147;
+      --navy-800:#243a52;
+      --navy-700:#324c66;
+      --navy-600:#4a6580;
+      --silver-50:#f4f5f7;
+      --silver-100:#e6e8ec;
+      --silver-200:#c8ced6;
+      --silver-300:#a8b0b8;
+      --silver-400:#8b939c;
+      --silver-500:#6c747d;
+      --ink:#0a131e;
+      --bone:#f7f5f1;
+      --bone-2:#ede9e2;
+      --line:rgba(168,176,184,.18);
+      --line-strong:rgba(168,176,184,.35);
+      --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+      --sans:'Inter','Segoe UI',system-ui,sans-serif;
+    }
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:var(--sans);background:var(--navy-850);color:var(--silver-100);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
+    button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+    ::selection{background:var(--silver-300);color:var(--navy-900)}
+    ::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:var(--navy-950)}::-webkit-scrollbar-thumb{background:var(--navy-700);border-radius:4px}::-webkit-scrollbar-thumb:hover{background:var(--silver-400)}
+
+    .wrap{max-width:1240px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3.5rem)}
+    .eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.36em;text-transform:uppercase;color:var(--silver-300);display:inline-flex;align-items:center;gap:14px}
+    .eyebrow::before{content:'';width:32px;height:1px;background:var(--silver-300)}
+
+    /* ───────── TOP BAR ───────── */
+    .topbar{background:var(--navy-950);border-bottom:1px solid var(--line);font-size:.74rem;color:var(--silver-300);letter-spacing:.06em}
+    .topbar-inner{display:flex;justify-content:space-between;align-items:center;padding:10px 0;gap:24px;flex-wrap:wrap}
+    .topbar-info{display:flex;gap:22px;flex-wrap:wrap}
+    .topbar-info span{display:inline-flex;align-items:center;gap:7px}
+    .topbar-info svg{width:13px;height:13px;color:var(--silver-400)}
+    .topbar-social{display:flex;gap:14px}
+    .topbar-social a{color:var(--silver-400);transition:color .2s}
+    .topbar-social a:hover{color:var(--silver-100)}
+    .topbar-social svg{width:14px;height:14px}
+
+    /* ───────── NAV ───────── */
+    nav{position:sticky;top:0;z-index:100;background:rgba(29,49,71,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
+    .nav-brand{display:flex;align-items:center;gap:14px}
+    .nav-logo{height:48px;width:48px;object-fit:contain;background:var(--navy-900);border-radius:8px;padding:4px;border:1px solid var(--line)}
+    .nav-brand-text{display:flex;flex-direction:column;line-height:1.1}
+    .nav-brand-text strong{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--silver-50);letter-spacing:.01em}
+    .nav-brand-text small{font-size:.6rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--silver-300);margin-top:3px}
+    .nav-links{display:flex;gap:32px}
+    .nav-links a{font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--silver-200);transition:color .2s;position:relative;padding:6px 0}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--silver-300);transform:scaleX(0);transform-origin:right;transition:transform .3s}
+    .nav-links a:hover{color:var(--silver-50)}
+    .nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+    .nav-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,var(--silver-200),var(--silver-300));color:var(--navy-900);font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:13px 22px;border-radius:4px;transition:transform .15s,box-shadow .2s}
+    .nav-cta:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(168,176,184,.18)}
+    .nav-cta svg{width:14px;height:14px}
+    .nav-toggle{display:none;width:32px;height:32px;color:var(--silver-100)}
+    .nav-toggle svg{width:24px;height:24px}
+
+    /* ───────── HERO ───────── */
+    .hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:80px 0 60px;overflow:hidden;background:radial-gradient(circle at 80% 20%,var(--navy-700) 0%,var(--navy-850) 50%,var(--navy-900) 100%)}
+    .hero-pattern{position:absolute;inset:0;opacity:.08;background-image:linear-gradient(var(--silver-300) 1px,transparent 1px),linear-gradient(90deg,var(--silver-300) 1px,transparent 1px);background-size:80px 80px;background-position:-1px -1px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);pointer-events:none}
+    .hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(168,176,184,.08) 0%,transparent 70%);top:-200px;right:-200px;pointer-events:none}
+    .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .85fr;gap:clamp(40px,6vw,80px);align-items:center;width:100%}
+    .hero-content .eyebrow{margin-bottom:28px}
+    .hero-title{font-family:var(--serif);font-size:clamp(2.6rem,5.8vw,4.6rem);font-weight:500;line-height:1.04;color:var(--silver-50);letter-spacing:-.015em;margin-bottom:24px}
+    .hero-title em{font-style:italic;font-weight:500;color:var(--silver-300);position:relative;display:inline-block}
+    .hero-title em::after{content:'';position:absolute;bottom:.05em;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--silver-400),transparent)}
+    .hero-sub{font-size:clamp(.95rem,1.15vw,1.05rem);font-weight:300;color:var(--silver-200);line-height:1.75;max-width:540px;margin-bottom:36px}
+    .hero-sub strong{font-weight:500;color:var(--silver-50)}
+    .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,var(--silver-100),var(--silver-300));color:var(--navy-900);font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:18px 32px;border-radius:4px;transition:transform .15s,box-shadow .25s;box-shadow:0 8px 28px rgba(168,176,184,.18)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(168,176,184,.32)}
+    .btn-primary svg{width:16px;height:16px}
+    .btn-ghost{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line-strong);color:var(--silver-100);font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:17px 28px;border-radius:4px;transition:border-color .2s,background .2s,color .2s}
+    .btn-ghost:hover{border-color:var(--silver-200);background:rgba(168,176,184,.06);color:var(--silver-50)}
+    .btn-ghost svg{width:15px;height:15px}
+    .hero-meta{display:flex;gap:36px;flex-wrap:wrap;padding-top:32px;border-top:1px solid var(--line)}
+    .hero-meta-item{display:flex;flex-direction:column;gap:4px}
+    .hero-meta-label{font-size:.66rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--silver-400)}
+    .hero-meta-val{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--silver-50)}
+
+    .hero-visual{position:relative;aspect-ratio:4/5;max-height:580px}
+    .hero-photo-frame{position:absolute;inset:0;border-radius:8px;overflow:hidden;border:1px solid var(--line-strong);box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px rgba(168,176,184,.05)}
+    .hero-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(.9) contrast(1.05)}
+    .hero-photo-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(15,29,44,.55) 100%)}
+    .hero-badge{position:absolute;bottom:-20px;left:-30px;background:var(--navy-950);border:1px solid var(--line-strong);border-radius:8px;padding:18px 22px;display:flex;align-items:center;gap:14px;backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:280px}
+    .hero-badge-pulse{width:10px;height:10px;border-radius:50%;background:#7ed4a3;flex-shrink:0;position:relative}
+    .hero-badge-pulse::before{content:'';position:absolute;inset:-4px;border-radius:50%;background:#7ed4a3;opacity:.4;animation:pulse 2s ease-out infinite}
+    @keyframes pulse{0%{transform:scale(1);opacity:.4}100%{transform:scale(2.2);opacity:0}}
+    .hero-badge-text{display:flex;flex-direction:column;gap:2px}
+    .hero-badge-text strong{font-size:.78rem;font-weight:600;color:var(--silver-50);letter-spacing:.04em}
+    .hero-badge-text small{font-size:.66rem;color:var(--silver-300);letter-spacing:.08em}
+    .hero-corner{position:absolute;top:-12px;right:-12px;width:80px;height:80px;border-top:1px solid var(--silver-300);border-right:1px solid var(--silver-300);border-radius:0 8px 0 0;pointer-events:none}
+
+    /* ───────── BAR / TRUST ───────── */
+    .trust{background:var(--navy-950);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:40px 0}
+    .trust-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;align-items:center}
+    .trust-item{display:flex;align-items:center;gap:14px;justify-content:center}
+    .trust-icon{width:36px;height:36px;color:var(--silver-300);flex-shrink:0}
+    .trust-text{display:flex;flex-direction:column;line-height:1.2}
+    .trust-text strong{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--silver-50)}
+    .trust-text small{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--silver-400);margin-top:2px}
+
+    /* ───────── ABOUT ───────── */
+    .about{padding:clamp(80px,10vw,140px) 0;background:var(--bone);color:var(--ink)}
+    .about-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(40px,6vw,90px);align-items:center}
+    .about-photo{position:relative;aspect-ratio:4/5;border-radius:8px;overflow:hidden}
+    .about-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15) contrast(1.04);transition:filter .8s,transform .8s}
+    .about-photo:hover img{filter:grayscale(0) contrast(1);transform:scale(1.02)}
+    .about-photo-frame{position:absolute;inset:14px;border:1px solid rgba(255,255,255,.4);border-radius:4px;pointer-events:none}
+    .about-photo-tag{position:absolute;left:-1px;bottom:24px;background:var(--navy-850);color:var(--silver-50);padding:14px 22px;font-family:var(--serif);font-size:1.1rem;font-weight:500;letter-spacing:.04em;border-radius:0 4px 4px 0}
+    .about-content .eyebrow{color:var(--navy-700);margin-bottom:20px}
+    .about-content .eyebrow::before{background:var(--navy-700)}
+    .about-content h2{font-family:var(--serif);font-size:clamp(2rem,3.8vw,2.9rem);font-weight:500;line-height:1.1;color:var(--ink);margin-bottom:28px;letter-spacing:-.01em}
+    .about-content h2 em{font-style:italic;color:var(--navy-700)}
+    .about-content p{font-size:1rem;font-weight:400;color:#3a4858;line-height:1.8;margin-bottom:1.2em}
+    .about-content p strong{color:var(--ink);font-weight:600}
+    .about-quote{margin-top:32px;padding:24px 28px;border-left:3px solid var(--navy-700);background:rgba(29,49,71,.04);font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--navy-850);line-height:1.5}
+    .credentials{margin-top:36px;padding-top:32px;border-top:1px solid rgba(15,19,30,.08)}
+    .credentials-title{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--silver-500);margin-bottom:16px;font-weight:600}
+    .credentials-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .cred{display:flex;align-items:flex-start;gap:12px;font-size:.86rem;color:#2a3340;line-height:1.5}
+    .cred-icon{width:18px;height:18px;color:var(--navy-700);flex-shrink:0;margin-top:2px}
+    .cred strong{font-weight:600;color:var(--ink);display:block;font-size:.92rem}
+    .cred span{color:#5a6675;font-size:.78rem;letter-spacing:.04em}
+
+    /* ───────── ÁREAS ───────── */
+    .areas{padding:clamp(80px,10vw,140px) 0;background:var(--navy-850);position:relative;overflow:hidden}
+    .areas::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,rgba(168,176,184,.06) 0%,transparent 50%);pointer-events:none}
+    .areas-header{text-align:center;max-width:700px;margin:0 auto 72px;position:relative;z-index:1}
+    .areas-header .eyebrow{margin-bottom:20px;justify-content:center}
+    .areas-header h2{font-family:var(--serif);font-size:clamp(2.1rem,4.2vw,3.2rem);font-weight:500;line-height:1.1;color:var(--silver-50);margin-bottom:18px}
+    .areas-header h2 em{font-style:italic;color:var(--silver-300)}
+    .areas-header p{font-size:.98rem;font-weight:300;color:var(--silver-300);line-height:1.75}
+    .areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative;z-index:1}
+    .area{background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:6px;padding:36px 30px;transition:all .3s ease;position:relative;overflow:hidden}
+    .area::before{content:'';position:absolute;top:0;left:0;width:0;height:1px;background:linear-gradient(90deg,var(--silver-200),transparent);transition:width .5s ease}
+    .area:hover::before{width:100%}
+    .area:hover{border-color:var(--line-strong);background:rgba(255,255,255,.04);transform:translateY(-4px)}
+    .area-num{font-family:var(--serif);font-size:.85rem;color:var(--silver-400);letter-spacing:.18em;margin-bottom:18px;font-style:italic}
+    .area-icon{width:42px;height:42px;color:var(--silver-300);margin-bottom:18px;transition:color .3s,transform .3s}
+    .area:hover .area-icon{color:var(--silver-50);transform:scale(1.05)}
+    .area h3{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:var(--silver-50);margin-bottom:12px;line-height:1.2}
+    .area p{font-size:.86rem;color:var(--silver-300);line-height:1.65}
+
+    /* ───────── DIFERENCIAIS ───────── */
+    .differentials{padding:clamp(80px,10vw,140px) 0;background:var(--bone-2);color:var(--ink);position:relative}
+    .differentials-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,90px);align-items:center}
+    .differentials-text .eyebrow{color:var(--navy-700);margin-bottom:20px}
+    .differentials-text .eyebrow::before{background:var(--navy-700)}
+    .differentials-text h2{font-family:var(--serif);font-size:clamp(2rem,3.8vw,2.8rem);font-weight:500;line-height:1.1;margin-bottom:24px;letter-spacing:-.01em}
+    .differentials-text h2 em{font-style:italic;color:var(--navy-700)}
+    .differentials-text p{font-size:1rem;color:#3a4858;line-height:1.75;margin-bottom:1em}
+    .differentials-list{display:flex;flex-direction:column;gap:18px}
+    .diff{background:#fff;border:1px solid rgba(15,19,30,.08);border-radius:8px;padding:24px 26px;display:flex;gap:20px;align-items:flex-start;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .diff:hover{transform:translateX(6px);border-color:var(--navy-700);box-shadow:0 8px 28px rgba(29,49,71,.08)}
+    .diff-num{flex-shrink:0;width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:var(--navy-850);color:var(--silver-50);border-radius:50%;font-family:var(--serif);font-size:1.15rem;font-weight:600;font-style:italic}
+    .diff-body h3{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:6px}
+    .diff-body p{font-size:.88rem;color:#5a6675;line-height:1.6;margin:0}
+
+    /* ───────── ATENDIMENTO ───────── */
+    .urgency{padding:clamp(60px,8vw,100px) 0;background:linear-gradient(135deg,var(--navy-900) 0%,var(--navy-850) 50%,var(--navy-800) 100%);position:relative;overflow:hidden}
+    .urgency::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(168,176,184,.08) 0%,transparent 70%);pointer-events:none}
+    .urgency-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative;z-index:1}
+    .urgency-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(168,176,184,.1);border:1px solid var(--line-strong);border-radius:50px;padding:8px 18px;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--silver-200);margin-bottom:22px}
+    .urgency-tag .pulse{width:8px;height:8px;border-radius:50%;background:#ff6b6b;animation:pulse2 1.5s ease-in-out infinite}
+    @keyframes pulse2{0%,100%{opacity:1}50%{opacity:.4}}
+    .urgency h2{font-family:var(--serif);font-size:clamp(2rem,4vw,2.9rem);font-weight:500;color:var(--silver-50);line-height:1.1;margin-bottom:22px;letter-spacing:-.01em}
+    .urgency h2 em{font-style:italic;color:var(--silver-300)}
+    .urgency p{font-size:1rem;color:var(--silver-200);line-height:1.75;margin-bottom:32px;max-width:520px}
+    .urgency-cta{display:inline-flex;align-items:center;gap:12px;background:#25D366;color:#fff;font-size:.9rem;font-weight:700;letter-spacing:.06em;padding:18px 32px;border-radius:6px;transition:transform .15s,box-shadow .25s}
+    .urgency-cta:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(37,211,102,.32)}
+    .urgency-cta svg{width:20px;height:20px}
+    .urgency-visual{position:relative}
+    .urgency-card{background:rgba(15,29,44,.7);backdrop-filter:blur(10px);border:1px solid var(--line-strong);border-radius:10px;padding:34px;text-align:center}
+    .urgency-icon-wrap{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--silver-100),var(--silver-300));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--navy-900)}
+    .urgency-icon-wrap svg{width:34px;height:34px}
+    .urgency-card h3{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--silver-50);margin-bottom:8px}
+    .urgency-card p{font-size:.88rem;color:var(--silver-300);line-height:1.6;margin:0 0 22px}
+    .urgency-list{text-align:left;display:flex;flex-direction:column;gap:10px;padding-top:22px;border-top:1px solid var(--line)}
+    .urgency-list-item{display:flex;align-items:center;gap:12px;font-size:.85rem;color:var(--silver-200)}
+    .urgency-list-item svg{width:16px;height:16px;color:#7ed4a3;flex-shrink:0}
+
+    /* ───────── PROCESSO ───────── */
+    .process{padding:clamp(80px,10vw,140px) 0;background:var(--bone)}
+    .process-header{text-align:center;max-width:680px;margin:0 auto 64px}
+    .process-header .eyebrow{color:var(--navy-700);margin-bottom:18px;justify-content:center}
+    .process-header .eyebrow::before{background:var(--navy-700)}
+    .process-header h2{font-family:var(--serif);font-size:clamp(2rem,4vw,2.9rem);font-weight:500;color:var(--ink);margin-bottom:14px;line-height:1.1}
+    .process-header h2 em{font-style:italic;color:var(--navy-700)}
+    .process-header p{font-size:.96rem;color:#5a6675;line-height:1.7}
+    .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+    .process-steps::before{content:'';position:absolute;top:32px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,var(--silver-300) 20%,var(--silver-300) 80%,transparent);z-index:0}
+    .step{position:relative;text-align:center;z-index:1}
+    .step-circle{width:64px;height:64px;border-radius:50%;background:var(--bone);border:2px solid var(--silver-300);color:var(--navy-850);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.4rem;font-weight:600;font-style:italic;margin:0 auto 22px;transition:all .3s;box-shadow:0 0 0 6px var(--bone)}
+    .step:hover .step-circle{background:var(--navy-850);color:var(--silver-50);border-color:var(--navy-850);transform:scale(1.05)}
+    .step h3{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:8px}
+    .step p{font-size:.84rem;color:#5a6675;line-height:1.6;padding:0 8px}
+
+    /* ───────── CONTATO / FOOTER ───────── */
+    .contact{padding:clamp(80px,10vw,140px) 0;background:var(--navy-950);position:relative}
+    .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start}
+    .contact-text .eyebrow{margin-bottom:20px}
+    .contact-text h2{font-family:var(--serif);font-size:clamp(2.1rem,4.2vw,3rem);font-weight:500;color:var(--silver-50);line-height:1.1;margin-bottom:24px;letter-spacing:-.01em}
+    .contact-text h2 em{font-style:italic;color:var(--silver-300)}
+    .contact-text>p{font-size:1rem;color:var(--silver-200);line-height:1.75;margin-bottom:36px}
+    .contact-info{display:flex;flex-direction:column;gap:20px}
+    .contact-info-item{display:flex;gap:18px;align-items:flex-start;padding:20px 22px;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:8px;transition:border-color .2s,background .2s}
+    .contact-info-item:hover{border-color:var(--line-strong);background:rgba(255,255,255,.045)}
+    .contact-info-icon{width:42px;height:42px;border-radius:50%;background:rgba(168,176,184,.1);display:flex;align-items:center;justify-content:center;color:var(--silver-300);flex-shrink:0}
+    .contact-info-icon svg{width:18px;height:18px}
+    .contact-info-text{flex:1;min-width:0}
+    .contact-info-label{font-size:.66rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--silver-400);margin-bottom:4px}
+    .contact-info-val{font-size:1rem;color:var(--silver-50);line-height:1.5;font-weight:500}
+    .contact-info-val small{display:block;font-size:.82rem;color:var(--silver-300);font-weight:400;margin-top:2px}
+
+    .contact-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px;padding:36px}
+    .contact-form h3{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--silver-50);margin-bottom:8px}
+    .contact-form>p{font-size:.88rem;color:var(--silver-300);margin-bottom:26px}
+    .form-row{margin-bottom:18px}
+    .form-row label{display:block;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--silver-300);margin-bottom:8px}
+    .form-row input,.form-row select,.form-row textarea{width:100%;background:var(--navy-900);border:1px solid var(--line);color:var(--silver-50);padding:14px 16px;font-size:.92rem;font-family:inherit;border-radius:6px;transition:border-color .2s,background .2s}
+    .form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:none;border-color:var(--silver-300);background:var(--navy-850)}
+    .form-row textarea{resize:vertical;min-height:110px;line-height:1.6}
+    .form-row select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a8b0b8' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:42px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .form-submit{width:100%;background:linear-gradient(180deg,var(--silver-100),var(--silver-300));color:var(--navy-900);font-size:.85rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:18px;border-radius:6px;display:flex;align-items:center;justify-content:center;gap:10px;transition:transform .15s,box-shadow .25s;margin-top:8px}
+    .form-submit:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(168,176,184,.2)}
+    .form-submit svg{width:16px;height:16px}
+    .form-note{font-size:.74rem;color:var(--silver-400);text-align:center;margin-top:14px;line-height:1.5}
+
+    /* ───────── FOOTER ───────── */
+    footer{background:#0a131e;border-top:1px solid var(--line);padding:60px 0 24px;color:var(--silver-300);font-size:.85rem}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;margin-bottom:42px}
+    .footer-brand{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+    .footer-brand img{height:48px;width:48px;object-fit:contain;background:var(--navy-900);border-radius:8px;padding:5px;border:1px solid var(--line)}
+    .footer-brand-text{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--silver-50);line-height:1.2}
+    .footer-brand-text small{display:block;font-family:var(--sans);font-size:.62rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--silver-400);margin-top:3px}
+    .footer-desc{font-size:.86rem;color:var(--silver-300);line-height:1.7;max-width:340px;margin-bottom:20px}
+    .footer-social{display:flex;gap:12px}
+    .footer-social a{width:38px;height:38px;border-radius:50%;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;color:var(--silver-300);transition:all .2s}
+    .footer-social a:hover{background:var(--silver-200);color:var(--navy-900);border-color:var(--silver-200)}
+    .footer-social svg{width:16px;height:16px}
+    .footer-col h4{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--silver-50);margin-bottom:18px;letter-spacing:.02em}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .footer-col a,.footer-col li{font-size:.84rem;color:var(--silver-300);transition:color .2s;line-height:1.6}
+    .footer-col a:hover{color:var(--silver-50)}
+    .footer-col li.with-icon{display:flex;align-items:flex-start;gap:8px}
+    .footer-col li svg{width:14px;height:14px;color:var(--silver-400);flex-shrink:0;margin-top:3px}
+    .footer-bottom{padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:.76rem;color:var(--silver-400)}
+    .footer-bottom a{color:var(--silver-300);transition:color .2s}
+    .footer-bottom a:hover{color:var(--silver-50)}
+
+    /* ───────── FLOAT WHATSAPP ───────── */
+    .float-wpp{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(37,211,102,.45);z-index:99;color:#fff;transition:transform .2s}
+    .float-wpp:hover{transform:scale(1.08)}
+    .float-wpp svg{width:30px;height:30px}
+    .float-wpp::before{content:'';position:absolute;inset:0;border-radius:50%;background:#25D366;opacity:.4;animation:pulse 2s ease-out infinite;z-index:-1}
+
+    /* ───────── REVEAL ───────── */
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+    .reveal.in{opacity:1;transform:translateY(0)}
+
+    /* ───────── RESPONSIVE ───────── */
+    @media(max-width:980px){
+      .hero-inner,.about-inner,.differentials-grid,.contact-inner,.urgency-inner{grid-template-columns:1fr;gap:50px}
+      .hero-visual{max-width:420px;margin:0 auto;width:100%}
+      .areas-grid{grid-template-columns:repeat(2,1fr)}
+      .process-steps{grid-template-columns:repeat(2,1fr);gap:36px}
+      .process-steps::before{display:none}
+      .trust-inner{grid-template-columns:repeat(2,1fr);gap:24px}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+      .footer-brand{grid-column:1/-1}
+      .nav-links{display:none}
+      .nav-toggle{display:flex;align-items:center;justify-content:center}
+      .credentials-list{grid-template-columns:1fr}
+    }
+    @media(max-width:600px){
+      .topbar-inner{justify-content:center}
+      .topbar-info{justify-content:center;font-size:.7rem;gap:14px}
+      .topbar-social{display:none}
+      .nav-cta{padding:11px 16px;font-size:.7rem}
+      .nav-cta span{display:none}
+      .hero{min-height:auto;padding:60px 0 40px}
+      .hero-meta{gap:24px}
+      .hero-badge{position:relative;left:0;bottom:0;margin-top:-10px}
+      .hero-corner{display:none}
+      .areas-grid,.form-grid{grid-template-columns:1fr}
+      .process-steps{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .contact-form{padding:26px 22px}
+      .float-wpp{width:54px;height:54px;bottom:16px;right:16px}
+      .float-wpp svg{width:26px;height:26px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="topbar-info">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-7.5-7-12a7 7 0 1 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Av. Rio Branco, 131 — sala 1704, Centro/RJ
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Atendimento 24h em casos urgentes
+        </span>
+      </div>
+      <div class="topbar-social">
+        <a href="https://www.instagram.com/adv.pedrogabrig/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="mailto:contato@pedrogabrig.adv.br" aria-label="E-mail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="wrap nav-inner">
+      <a href="#" class="nav-brand" aria-label="Pedro Gabrig Advocacia">
+        <img src="logo.webp" alt="Logo Pedro Gabrig Advocacia" class="nav-logo" />
+        <div class="nav-brand-text">
+          <strong>Pedro Gabrig</strong>
+          <small>Advocacia Criminal</small>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#areas">Áreas</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#processo">Processo</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <a href="https://wa.me/5521999999999" class="nav-cta" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2.1-.2-.5-.5-.4-.6-.4h-.6c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.5-1.4c1.4.8 2.9 1.2 4.5 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.4 0-2.8-.4-4-1.1l-.3-.2-3 .8.8-2.9-.2-.3c-.8-1.3-1.3-2.8-1.3-4.3 0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-glow"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-content reveal">
+        <div class="eyebrow">Advocacia Criminal · OAB/RJ</div>
+        <h1 class="hero-title">Defesa <em>técnica</em> nos momentos<br/>mais decisivos da sua vida.</h1>
+        <p class="hero-sub">
+          Atuação <strong>especializada em Direito Penal e Processo Penal</strong>, com base em sólida formação acadêmica e estratégia processual rigorosa. Cada caso é tratado com a seriedade e a dedicação que ele exige — porque liberdade não admite improviso.
+        </p>
+        <div class="hero-btns">
+          <a href="https://wa.me/5521999999999?text=Ol%C3%A1%2C%20Dr.%20Pedro.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.5-1.4c1.4.8 2.9 1.2 4.5 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+            Falar com o Dr. Pedro
+          </a>
+          <a href="#areas" class="btn-ghost">
+            Áreas de atuação
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Formação</span>
+            <span class="hero-meta-val">UERJ · UFRJ · Coimbra</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Localização</span>
+            <span class="hero-meta-val">Centro do Rio de Janeiro</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Atuação</span>
+            <span class="hero-meta-val">Todo território nacional</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-corner"></div>
+        <div class="hero-photo-frame">
+          <img src="advogado.webp" alt="Dr. Pedro Gabrig — Advogado Criminalista" />
+        </div>
+        <div class="hero-badge">
+          <span class="hero-badge-pulse"></span>
+          <div class="hero-badge-text">
+            <strong>Atendimento de plantão</strong>
+            <small>Casos urgentes — flagrantes e prisões</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust">
+    <div class="wrap trust-inner">
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        <div class="trust-text"><strong>Mestrando</strong><small>UERJ — Direito Penal</small></div>
+      </div>
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9-4 9 4v6c0 5-4 8-9 9-5-1-9-4-9-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div class="trust-text"><strong>Coimbra</strong><small>Penal Econômico</small></div>
+      </div>
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M9 6V4h6v2M8 11h8M8 15h5"/></svg>
+        <div class="trust-text"><strong>ABDConst</strong><small>Processo Penal</small></div>
+      </div>
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 12h6M9 16h6"/></svg>
+        <div class="trust-text"><strong>Próximo aos órgãos</strong><small>de persecução criminal</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about" id="sobre">
+    <div class="wrap about-inner">
+      <div class="about-photo reveal">
+        <img src="pedro-2.jpg" alt="Dr. Pedro Gabrig" />
+        <div class="about-photo-frame"></div>
+        <div class="about-photo-tag">Dr. Pedro Gabrig</div>
+      </div>
+      <div class="about-content reveal">
+        <div class="eyebrow">Sobre o escritório</div>
+        <h2>Excelência acadêmica a serviço da <em>defesa criminal</em>.</h2>
+        <p>
+          O escritório <strong>Pedro Gabrig Advocacia</strong> nasce do compromisso com uma advocacia criminal técnica, ética e profundamente preparada. Localizado no coração do Rio de Janeiro — <strong>Av. Rio Branco, 131, sala 1704</strong> — nossa sede está estrategicamente próxima aos principais órgãos públicos que integram a persecução criminal, permitindo agilidade e presença em todas as fases do processo.
+        </p>
+        <p>
+          Acreditamos que a defesa criminal exige mais do que conhecimento da lei: exige <strong>estudo constante, estratégia, sensibilidade humana e disponibilidade real</strong>. É isso que entregamos a cada cliente, em cada audiência, em cada petição.
+        </p>
+        <div class="about-quote">
+          "A liberdade do cliente não comporta improviso. Comporta preparo, técnica e dedicação integral."
+        </div>
+        <div class="credentials">
+          <div class="credentials-title">Formação & Titulação</div>
+          <div class="credentials-list">
+            <div class="cred">
+              <svg class="cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c2 2 4 3 6 3s4-1 6-3v-5"/></svg>
+              <div><strong>Mestrado em Direito Penal</strong><span>UERJ — em andamento</span></div>
+            </div>
+            <div class="cred">
+              <svg class="cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c2 2 4 3 6 3s4-1 6-3v-5"/></svg>
+              <div><strong>Pós em Direito Penal Econômico</strong><span>Universidade de Coimbra</span></div>
+            </div>
+            <div class="cred">
+              <svg class="cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c2 2 4 3 6 3s4-1 6-3v-5"/></svg>
+              <div><strong>Pós-Graduado em Processo Penal</strong><span>ABDConst</span></div>
+            </div>
+            <div class="cred">
+              <svg class="cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c2 2 4 3 6 3s4-1 6-3v-5"/></svg>
+              <div><strong>Bacharel em Direito</strong><span>UFRJ</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREAS -->
+  <section class="areas" id="areas">
+    <div class="wrap">
+      <div class="areas-header reveal">
+        <div class="eyebrow">Áreas de atuação</div>
+        <h2>Defesa especializada em <em>matéria criminal</em>.</h2>
+        <p>Atuação técnica e estratégica em todas as frentes do Direito Penal e Processo Penal — da investigação preliminar à execução da pena, no interesse e na proteção do cliente.</p>
+      </div>
+      <div class="areas-grid">
+        <div class="area reveal">
+          <div class="area-num">i.</div>
+          <svg class="area-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4 12H2M22 12h-2M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3"/><circle cx="12" cy="12" r="4"/></svg>
+          <h3>Crimes em Geral</h3>
+          <p>Defesa em ações penais condenatórias, dos crimes contra a pessoa, patrimônio, fé pública e administração pública.</p>
+        </div>
+        <div class="area reveal">
+          <div class="area-num">ii.</div>
+          <svg class="area-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6V4a4 4 0 018 0v2M8 12h8M8 16h5"/></svg>
+          <h3>Direito Penal Econômico</h3>
+          <p>Defesa em crimes tributários, contra o sistema financeiro, lavagem de capitais, corrupção e crimes empresariais.</p>
+        </div>
+        <div class="area reveal">
+          <div class="area-num">iii.</div>
+          <svg class="area-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V10l7-6 7 6v11"/><rect x="9" y="13" width="6" height="8"/></svg>
+          <h3>Tribunal do Júri</h3>
+          <p>Atuação técnica em crimes dolosos contra a vida — pronúncia, plenário do júri e sustentação oral perante o Conselho de Sentença.</p>
+        </div>
+        <div class="area reveal">
+          <div class="area-num">iv.</div>
+          <svg class="area-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+          <h3>Habeas Corpus</h3>
+          <p>Impetração e sustentação oral em todas as instâncias, inclusive nos tribunais superiores (STJ e STF).</p>
+        </div>
+        <div class="area reveal">
+          <div class="area-num">v.</div>
+          <svg class="area-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <h3>Plantão & Flagrante</h3>
+          <p>Atendimento imediato em audiências de custódia, prisões em flagrante e medidas cautelares de urgência.</p>
+        </div>
+        <div class="area reveal">
+          <div class="area-num">vi.</div>
+          <svg class="area-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h14v16H5z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+          <h3>Recursos Criminais</h3>
+          <p>Apelações, recursos especiais e extraordinários, embargos infringentes e revisão criminal nos tribunais competentes.</p>
+        </div>
+        <div class="area reveal">
+          <div class="area-num">vii.</div>
+          <svg class="area-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+          <h3>Investigação Defensiva</h3>
+          <p>Atuação na fase pré-processual com produção de prova lícita pela defesa para reverter narrativas acusatórias.</p>
+        </div>
+        <div class="area reveal">
+          <div class="area-num">viii.</div>
+          <svg class="area-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2"/></svg>
+          <h3>Execução Penal</h3>
+          <p>Progressão de regime, livramento condicional, remição, indulto e demais incidentes da execução da pena.</p>
+        </div>
+        <div class="area reveal">
+          <div class="area-num">ix.</div>
+          <svg class="area-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 9v12"/></svg>
+          <h3>Compliance & Acordos</h3>
+          <p>Acordo de não persecução penal (ANPP), colaboração premiada e estratégias de mitigação em investigações complexas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="differentials" id="diferenciais">
+    <div class="wrap differentials-grid">
+      <div class="differentials-text reveal">
+        <div class="eyebrow">Por que nos escolher</div>
+        <h2>Uma advocacia que <em>se importa</em> — e se prepara.</h2>
+        <p>O que nos diferencia não é apenas o conhecimento jurídico, mas a forma como tratamos cada caso: com proximidade, transparência e uma estratégia construída sob medida para cada cliente.</p>
+        <p>A liberdade, a honra e o patrimônio do nosso cliente merecem mais do que respostas prontas. Merecem dedicação real.</p>
+      </div>
+      <div class="differentials-list reveal">
+        <div class="diff">
+          <div class="diff-num">01</div>
+          <div class="diff-body">
+            <h3>Formação acadêmica de excelência</h3>
+            <p>Mestrado na UERJ, pós-graduação na Universidade de Coimbra e ABDConst — conhecimento aprofundado aplicado à prática.</p>
+          </div>
+        </div>
+        <div class="diff">
+          <div class="diff-num">02</div>
+          <div class="diff-body">
+            <h3>Atendimento direto com o advogado</h3>
+            <p>Você fala diretamente com o Dr. Pedro Gabrig em todas as fases. Sem intermediários, sem terceirização da estratégia.</p>
+          </div>
+        </div>
+        <div class="diff">
+          <div class="diff-num">03</div>
+          <div class="diff-body">
+            <h3>Plantão para casos urgentes</h3>
+            <p>Disponibilidade real para flagrantes, audiências de custódia e situações que não esperam o horário comercial.</p>
+          </div>
+        </div>
+        <div class="diff">
+          <div class="diff-num">04</div>
+          <div class="diff-body">
+            <h3>Estratégia personalizada</h3>
+            <p>Cada caso recebe uma análise técnica completa antes de qualquer movimento processual. Nada é feito no automático.</p>
+          </div>
+        </div>
+        <div class="diff">
+          <div class="diff-num">05</div>
+          <div class="diff-body">
+            <h3>Sigilo absoluto</h3>
+            <p>Tratamento confidencial e protocolos rigorosos de proteção de informações em todas as etapas do atendimento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- URGÊNCIA / PLANTÃO -->
+  <section class="urgency">
+    <div class="wrap urgency-inner">
+      <div class="reveal">
+        <div class="urgency-tag"><span class="pulse"></span> Plantão criminal</div>
+        <h2>Foi preso ou recebeu uma <em>intimação</em>? Aja imediatamente.</h2>
+        <p>
+          Nas primeiras horas após uma prisão, cada minuto importa. A presença de um advogado criminalista experiente desde a delegacia pode definir o rumo de toda a investigação. Não enfrente esse momento sozinho.
+        </p>
+        <a href="https://wa.me/5521999999999?text=URGENTE%20-%20Preciso%20de%20atendimento%20criminal" target="_blank" rel="noopener" class="urgency-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2.1-.2-.5-.5-.4-.6-.4h-.6c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.5-1.4c1.4.8 2.9 1.2 4.5 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.4 0-2.8-.4-4-1.1l-.3-.2-3 .8.8-2.9-.2-.3c-.8-1.3-1.3-2.8-1.3-4.3 0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+          Ligue agora — atendimento imediato
+        </a>
+      </div>
+      <div class="urgency-visual reveal">
+        <div class="urgency-card">
+          <div class="urgency-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 13 13 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 13 13 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <h3>Plantão Criminal 24h</h3>
+          <p>Atendimento de urgência para situações que exigem resposta imediata.</p>
+          <div class="urgency-list">
+            <div class="urgency-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+              Prisão em flagrante
+            </div>
+            <div class="urgency-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+              Audiência de custódia
+            </div>
+            <div class="urgency-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+              Mandado de prisão
+            </div>
+            <div class="urgency-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+              Operações policiais e busca e apreensão
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="process" id="processo">
+    <div class="wrap">
+      <div class="process-header reveal">
+        <div class="eyebrow">Como atuamos</div>
+        <h2>Um <em>caminho claro</em>, do primeiro contato à decisão final.</h2>
+        <p>Transparência em cada etapa. Você sempre saberá o que está sendo feito, por que está sendo feito e quais são os próximos passos.</p>
+      </div>
+      <div class="process-steps">
+        <div class="step reveal">
+          <div class="step-circle">i</div>
+          <h3>Contato inicial</h3>
+          <p>Atendimento sigiloso para entender o caso, identificar urgências e alinhar expectativas.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-circle">ii</div>
+          <h3>Análise técnica</h3>
+          <p>Estudo aprofundado dos autos, da imputação e da prova produzida — base de toda a estratégia.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-circle">iii</div>
+          <h3>Estratégia & defesa</h3>
+          <p>Atuação ativa em audiências, recursos e medidas processuais com foco no melhor resultado possível.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-circle">iv</div>
+          <h3>Acompanhamento</h3>
+          <p>Comunicação constante, prestação de contas e resposta rápida durante todo o caso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact" id="contato">
+    <div class="wrap contact-inner">
+      <div class="contact-text reveal">
+        <div class="eyebrow">Contato</div>
+        <h2>Vamos conversar sobre o seu <em>caso</em>.</h2>
+        <p>O primeiro atendimento é sigiloso e tem como único objetivo entender a sua situação e orientar os próximos passos. Atendemos no Centro do Rio de Janeiro e em todo o território nacional.</p>
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-7.5-7-12a7 7 0 1 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            <div class="contact-info-text">
+              <div class="contact-info-label">Endereço</div>
+              <div class="contact-info-val">Av. Rio Branco, n.º 131 — sala 1704<small>Centro · Rio de Janeiro/RJ · CEP 20040-006</small></div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.5-1.4c1.4.8 2.9 1.2 4.5 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+            </div>
+            <div class="contact-info-text">
+              <div class="contact-info-label">WhatsApp</div>
+              <div class="contact-info-val"><a href="https://wa.me/5521999999999" target="_blank" rel="noopener">(21) 99999-9999</a><small>Atendimento de urgência 24h</small></div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </div>
+            <div class="contact-info-text">
+              <div class="contact-info-label">E-mail</div>
+              <div class="contact-info-val"><a href="mailto:contato@pedrogabrig.adv.br">contato@pedrogabrig.adv.br</a><small>Resposta em até 24h em dias úteis</small></div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </div>
+            <div class="contact-info-text">
+              <div class="contact-info-label">Instagram</div>
+              <div class="contact-info-val"><a href="https://www.instagram.com/adv.pedrogabrig/" target="_blank" rel="noopener">@adv.pedrogabrig</a><small>Conteúdo jurídico e atualizações</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+        <h3>Solicite uma consulta</h3>
+        <p>Preencha o formulário abaixo. Seu contato é confidencial.</p>
+        <div class="form-grid">
+          <div class="form-row">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome" />
+          </div>
+          <div class="form-row">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000" />
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required placeholder="seu@email.com" />
+        </div>
+        <div class="form-row">
+          <label for="assunto">Tipo de demanda</label>
+          <select id="assunto" name="assunto" required>
+            <option value="">Selecione uma opção</option>
+            <option>Caso urgente / flagrante</option>
+            <option>Defesa em ação penal</option>
+            <option>Habeas Corpus</option>
+            <option>Recurso criminal</option>
+            <option>Tribunal do Júri</option>
+            <option>Crimes de natureza econômica</option>
+            <option>Execução penal</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="mensagem">Resumo do caso</label>
+          <textarea id="mensagem" name="mensagem" required placeholder="Descreva brevemente sua situação. Todas as informações são tratadas com sigilo absoluto."></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          Enviar solicitação
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="form-note">Ao enviar, você será redirecionado ao WhatsApp com o resumo da sua solicitação.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="logo.webp" alt="Logo Pedro Gabrig" />
+            <div class="footer-brand-text">Pedro Gabrig<small>Advocacia Criminal</small></div>
+          </div>
+          <p class="footer-desc">Escritório de advocacia criminal estabelecido no Centro do Rio de Janeiro, com atuação especializada em Direito Penal e Processo Penal e foco em defesa técnica de excelência.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/adv.pedrogabrig/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="https://wa.me/5521999999999" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.5-1.4c1.4.8 2.9 1.2 4.5 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+            </a>
+            <a href="mailto:contato@pedrogabrig.adv.br" aria-label="E-mail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#sobre">Sobre o escritório</a></li>
+            <li><a href="#areas">Áreas de atuação</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#processo">Como atuamos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li class="with-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-7.5-7-12a7 7 0 1 1 14 0c0 4.5-7 12-7 12z"/></svg>
+              Av. Rio Branco, 131 — sala 1704<br/>Centro, Rio de Janeiro/RJ
+            </li>
+            <li class="with-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.5-1.4c1.4.8 2.9 1.2 4.5 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+              <a href="https://wa.me/5521999999999" target="_blank" rel="noopener">(21) 99999-9999</a>
+            </li>
+            <li class="with-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              <a href="mailto:contato@pedrogabrig.adv.br">contato@pedrogabrig.adv.br</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Pedro Gabrig Advocacia Criminal · Todos os direitos reservados.</span>
+        <span>Conforme o Provimento 205/2021 do CFOA — Resp.: Pedro Gabrig OAB/RJ</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5521999999999?text=Ol%C3%A1%2C%20Dr.%20Pedro." class="float-wpp" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2.1-.2-.5-.5-.4-.6-.4h-.6c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.5-1.4c1.4.8 2.9 1.2 4.5 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.4 0-2.8-.4-4-1.1l-.3-.2-3 .8.8-2.9-.2-.3c-.8-1.3-1.3-2.8-1.3-4.3 0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+  </a>
+
+  <script>
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Phone mask
+    const tel = document.getElementById('telefone');
+    if (tel) {
+      tel.addEventListener('input', (e) => {
+        let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+        if (v.length > 6) v = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
+        else if (v.length > 2) v = `(${v.slice(0,2)}) ${v.slice(2)}`;
+        else if (v.length > 0) v = `(${v}`;
+        e.target.value = v;
+      });
+    }
+
+    // Form -> WhatsApp
+    function handleSubmit(e) {
+      e.preventDefault();
+      const f = e.target;
+      const nome = f.nome.value.trim();
+      const tel = f.telefone.value.trim();
+      const email = f.email.value.trim();
+      const assunto = f.assunto.value;
+      const msg = f.mensagem.value.trim();
+      const text =
+`Olá, Dr. Pedro. Gostaria de uma consulta.
+
+*Nome:* ${nome}
+*Telefone:* ${tel}
+*E-mail:* ${email}
+*Tipo de demanda:* ${assunto}
+
+*Resumo:*
+${msg}`;
+      const url = `https://wa.me/5521999999999?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+
+    // Mobile nav (simple)
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const isOpen = links.style.display === 'flex';
+        links.style.display = isOpen ? '' : 'flex';
+        links.style.position = 'absolute';
+        links.style.top = '80px';
+        links.style.left = '0';
+        links.style.right = '0';
+        links.style.flexDirection = 'column';
+        links.style.background = 'var(--navy-900)';
+        links.style.padding = '20px';
+        links.style.borderBottom = '1px solid var(--line)';
+        if (isOpen) { links.style.display = ''; links.removeAttribute('style'); }
+      });
+    }
+  </script>
+</body>
+</html>
